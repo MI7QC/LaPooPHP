@@ -58,7 +58,7 @@ class Compte
             $this->solde -= $montant;
         }else{
             echo "Montant invalide ou solde insuffisant";
-        }
+        } 
     }
 
 }
