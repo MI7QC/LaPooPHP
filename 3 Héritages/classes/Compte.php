@@ -3,7 +3,7 @@
 /**
  * Classe correspondant à un compte bancaire
  */
-class Compte
+abstract class Compte
 {
     /**
      * Titulaire du compte
@@ -92,7 +92,6 @@ class Compte
         }
     }
   
-
 
     /**
      * Méthode magique pour la conversion en chaîne de caractères
