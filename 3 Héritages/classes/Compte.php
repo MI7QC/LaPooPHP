@@ -69,18 +69,24 @@ abstract class Compte
 
     /**
      * Définit le solde du compte
-     * @param float $solde Solde du compte
+     * @param float $montant Solde du compte
      * @return Compte Compte bancaire
      */
-    public function setSolde(float $solde):self
+    public function setSolde(float $montant):self
     {
         //vérifie si le solde du compte
-        if($solde >= 0){
-            $this->solde = $solde;
+        if($montant >= 0){
+            $this->solde = $montant;
         }
         return $this;
     }
     
+    /**
+     * Retire un  montant du solde du compte
+     * 
+     * @param float $montant
+     * @return void
+     */
     public function retirer(float $montant)
     {
         // On vérifie si le découvert permet le retrait
