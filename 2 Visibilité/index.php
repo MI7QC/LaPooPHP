@@ -25,12 +25,3 @@ $compte1->setTitulaire('Bob');
 
 
 echo $compte1->__toString();
-
-
-
-
-
-
-
-
-
