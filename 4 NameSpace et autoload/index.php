@@ -1,7 +1,7 @@
 <?php
 
 use App\Autoloader;
-//pas besoin de use pour compte vue que la class est abstract
+//pas besoin de use pour compte vue la class est abstract
 use App\Client\Compte as CompteClient;
 use App\Banque\{CompteCourant,CompteEpargne};
 
