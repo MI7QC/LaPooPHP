@@ -23,15 +23,15 @@ abstract class Compte
      * 
      *Constructeur de compte bancaire
      * @param string $nom du titulaire
-     * @param float $montant Montant du solde à l'ouverture
+     * @param float $solde Montant du solde à l'ouverture
      */
-    public function __construct(string $titulaire, float $montant = 500)
+    public function __construct(string $titulaire, float $solde = 500)
     {
         // On affecte le titulaire à la propriété titulaire
         $this->titulaire = $titulaire;
 
         // On affecte le solde à la propriété solde
-        $this->solde = $montant;
+        $this->solde = $solde;
     }
 
     
@@ -71,14 +71,14 @@ abstract class Compte
 
     /**
      * Définit le solde du compte
-     * @param float $montant Solde du compte
+     * @param float $solde Solde du compte
      * @return Compte Compte bancaire
      */
-    public function setSolde(float $montant):self
+    public function setSolde(float $solde):self
     {
         //vérifie si le solde du compte
-        if($montant >= 0){
-            $this->solde = $montant;
+        if($solde >= 0){
+            $this->solde = $solde;
         }
         return $this;
     }
@@ -86,15 +86,15 @@ abstract class Compte
     /**
      * Retire un  montant du solde du compte
      * 
-     * @param float $montant
+     * @param float $solde
      * @return void
      */
-    public function retirer(float $montant)
+    public function retirer(float $solde)
     {
         // On vérifie si le découvert permet le retrait
-        if($montant > 0 && $this->solde - $montant >= $montant)                       
+        if($solde > 0 && $this->solde - $solde >= $solde)                       
         {
-            $this->solde -= $montant;
+            $this->solde -= $solde;
         }else{
             echo 'Montant invalide ou solde insuffisant';
         }
